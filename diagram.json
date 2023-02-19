@@ -1,0 +1,87 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-pi-pico",
+            "id": "pico",
+            "top": 20,
+            "left": 60,
+            "attrs": {
+                "env": "arduino-community"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": 48,
+            "left": 0,
+            "attrs": {
+                "color": "red"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led2",
+            "top": 98,
+            "left": 0,
+            "attrs": {
+                "color": "yellow"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led3",
+            "top": 148,
+            "left": 0,
+            "attrs": {
+                "color": "green"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "pico:GND.2",
+            "led1:C",
+            "black",
+            []
+        ],
+        [
+            "pico:GP5",
+            "led1:A",
+            "blue",
+            []
+        ],
+        [
+            "pico:GND.3",
+            "led2:C",
+            "black",
+            []
+        ],
+        [
+            "pico:GP9",
+            "led2:A",
+            "blue",
+            []
+        ],
+        [
+            "pico:GND.4",
+            "led3:C",
+            "black",
+            []
+        ],
+        [
+            "pico:GP13",
+            "led3:A",
+            "blue",
+            []
+        ],
+        [
+            "$serialMonitor:RX",
+            "pico:GP0",
+            "",
+            []
+        ]
+    ]
+}

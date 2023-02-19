@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = 'hello_uart.hex'
+elf = 'target/thumbv6m-none-eabi/release/rp2040-wokwi-test'
+gdbServerPort=3333
